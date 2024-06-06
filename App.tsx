@@ -26,8 +26,11 @@ const App=()=> {
    
 }
 const Student=()=> {
+  let timer=setInterval(()=>{
+    console.warn("Timer called")
+  },2000)
   useEffect(()=>{
-   return()=>{ console.warn("useEffect called on unmount");}
+   return()=>clearInterval(timer)
   })
   return(
     <View >
